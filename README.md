@@ -1,5 +1,5 @@
 # smart_tuple
- Not really that smart, just added an index operator. It checks if the implicit casting is to the correct type at runtime, and throws a <code>std::bad_cast</code> if it tries to cast to the wrong type. Also added a <code>smart_tuple::get<size_t>()</code> method and you can explicitly get a type from a result like this: <code>tuple[1].get<int>()</code>
+ Not really that smart, just added an index operator. It checks if the implicit casting is to the correct type at runtime, and throws a ```std::bad_cast``` if it tries to cast to the wrong type. Also added a ```smart_tuple::get<size_t>()``` method and you can explicitly get a type from a result like this: ```tuple[1].get<int>()```
 ```cpp
 using namespace kaixo;
 int main()
