@@ -1,14 +1,7 @@
 #pragma once
-#include <tuple>
-#include <concepts>
-#include <utility>
-#include <typeinfo>
-#include <stdexcept>
+#include "utils.hpp"
 
 namespace kaixo {
-	template<class T, class ...Tys>
-	concept one_of = (std::same_as<Tys, T> || ...);
-
 	template<class ...Tys>
 	class smart_tuple : public std::tuple<Tys...> {
 		using seq = std::make_index_sequence<sizeof...(Tys)>;
